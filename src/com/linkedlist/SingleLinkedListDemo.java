@@ -9,10 +9,13 @@ public class SingleLinkedListDemo {
         SingleLinkedList singleLinkedList = new SingleLinkedList();
         singleLinkedList.showLinkedList();
 
-        singleLinkedList.addLinkedList(node1);
+        singleLinkedList.addNode(node1);
+        singleLinkedList.addNode(node2);
+        singleLinkedList.addNode(node3);
         singleLinkedList.showLinkedList();
-        singleLinkedList.addLinkedList(node2);
-        singleLinkedList.addLinkedList(node3);
+
+        singleLinkedList.removeNode(2);
         singleLinkedList.showLinkedList();
+
     }
 }

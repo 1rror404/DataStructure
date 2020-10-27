@@ -19,8 +19,8 @@ public class SingleLinkedList {
             if (temp == null) {
                 break;
             }
-            System.out.println(temp.no+"  "+temp.name);
-            temp=temp.next;
+            System.out.println(temp.no + "  " + temp.name);
+            temp = temp.next;
 
         }
     }
@@ -31,7 +31,7 @@ public class SingleLinkedList {
     }
 
     //单链表添加节点
-    public void addLinkedList(ListNode node) {
+    public void addNode(ListNode node) {
         ListNode temp = getHead();
         while (true) {
             //找到链表最后
@@ -43,6 +43,27 @@ public class SingleLinkedList {
         }
         //找到链表最后把node放在后面
         temp.next = node;
+    }
+
+    //单链表移除节点
+    public void removeNode(int id) {
+        ListNode temp = getHead();
+        boolean flag = false;  //用一个标志代表是否找到要移除的节点
+        while (true) {
+            if (temp.next == null) {
+                break;
+            }
+            if (temp.next.no == id) {
+                flag = true;
+                break;
+            }
+            temp = temp.next;
+        }
+        if (flag) {
+            temp.next = temp.next.next;  //将待移除的节点的前一个节点指向 要移除节点的下一个节点。 被移除的节点会被回收
+        } else {
+            System.out.println("没有找到要删除的节点！");
+        }
 
     }
 
