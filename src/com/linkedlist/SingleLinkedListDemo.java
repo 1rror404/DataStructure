@@ -9,13 +9,13 @@ public class SingleLinkedListDemo {
         ListNode node5 = new ListNode(5, "关胜");
 
         SingleLinkedList singleLinkedList = new SingleLinkedList();
-//        singleLinkedList.addNode(node1);
-//        singleLinkedList.addNode(node2);
-//        singleLinkedList.addNode(node3);
+        singleLinkedList.addNode(node1);
+        singleLinkedList.addNode(node2);
+        singleLinkedList.addNode(node3);
 
-        singleLinkedList.orderByAddNode(node2);
         singleLinkedList.orderByAddNode(node5);
-        singleLinkedList.orderByAddNode(node3);
+        singleLinkedList.orderByAddNode(node4);
+
 
         singleLinkedList.showLinkedList();
 
