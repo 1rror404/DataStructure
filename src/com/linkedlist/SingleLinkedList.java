@@ -45,6 +45,30 @@ public class SingleLinkedList {
         temp.next = node;
     }
 
+    //按照no的顺序添加节点（升序）
+    public void orderByAddNode(ListNode node) {
+        ListNode temp = getHead();
+        boolean flag = false; //用一个标志代表是否找到要添加节点的位置
+        while (true) {
+            if (temp.next == null) {
+                break;
+            }
+            if (temp.next.no > node.no) {
+                break;
+            } else if (temp.next.no == node.no) {
+                flag = true;
+                break;
+            }
+            temp = temp.next;
+        }
+        if (flag) {
+            System.out.println("节点已存在");
+        } else {
+            node.next = temp.next;
+            temp.next = node;
+        }
+    }
+
     //单链表移除节点
     public void removeNode(int id) {
         ListNode temp = getHead();
@@ -64,7 +88,6 @@ public class SingleLinkedList {
         } else {
             System.out.println("没有找到要删除的节点！");
         }
-
     }
 
 }

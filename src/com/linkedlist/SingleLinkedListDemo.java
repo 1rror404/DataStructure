@@ -5,17 +5,20 @@ public class SingleLinkedListDemo {
         ListNode node1 = new ListNode(1, "宋江");
         ListNode node2 = new ListNode(2, "卢俊义");
         ListNode node3 = new ListNode(3, "吴用");
+        ListNode node4 = new ListNode(4, "公孙胜");
+        ListNode node5 = new ListNode(5, "关胜");
 
         SingleLinkedList singleLinkedList = new SingleLinkedList();
+//        singleLinkedList.addNode(node1);
+//        singleLinkedList.addNode(node2);
+//        singleLinkedList.addNode(node3);
+
+        singleLinkedList.orderByAddNode(node2);
+        singleLinkedList.orderByAddNode(node5);
+        singleLinkedList.orderByAddNode(node3);
+
         singleLinkedList.showLinkedList();
 
-        singleLinkedList.addNode(node1);
-        singleLinkedList.addNode(node2);
-        singleLinkedList.addNode(node3);
-        singleLinkedList.showLinkedList();
-
-        singleLinkedList.removeNode(2);
-        singleLinkedList.showLinkedList();
 
     }
 }
