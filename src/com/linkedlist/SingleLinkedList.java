@@ -90,4 +90,25 @@ public class SingleLinkedList {
         }
     }
 
+    //单链表修改节点
+    public void updateNode(ListNode node) {
+        ListNode temp = getHead();
+        boolean flag = false; //判断是否找到节点
+        while (true) {
+            if (temp.next == null) {
+                break;
+            }
+            if (temp.no == node.no) {
+                flag = true;
+                break;
+            }
+            temp = temp.next;
+        }
+        if (flag) {
+            temp.name = node.name;
+        } else {
+            System.out.println("未找到该节点");
+        }
+    }
+
 }

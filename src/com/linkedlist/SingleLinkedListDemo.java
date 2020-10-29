@@ -16,6 +16,9 @@ public class SingleLinkedListDemo {
         singleLinkedList.orderByAddNode(node5);
         singleLinkedList.orderByAddNode(node4);
 
+        ListNode newNode3 = new ListNode(3, "真没用");
+        singleLinkedList.updateNode(newNode3);
+
 
         singleLinkedList.showLinkedList();
 
