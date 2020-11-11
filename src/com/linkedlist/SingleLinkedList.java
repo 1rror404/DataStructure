@@ -21,7 +21,6 @@ public class SingleLinkedList {
             }
             System.out.println(temp.no + "  " + temp.name);
             temp = temp.next;
-
         }
     }
 
